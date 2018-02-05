@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Into App</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+    {% block body %}
+        <div class="jumbotron">
+            <h1>Login</h1>
+        </div>
+        
+        <form action="" method="post">
+        <div class="form-group">
+           <label for="">Username</label>
+            <input type="text" name="username" class="form-control" value= {{ request.form.username }}>
+        </div>
+        <div class="form-group">
+            <label >Password</label>
+            <input type="password" name="password" class="form-control" value ={{ request.form.password }}>
+
+        </div>
+        <button type="submit" class="btn btn-success btn-lg">Submit</button>
+        </form>
+
+
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+
+    {% block body %}
+
+        <h1>{{article.title}}</h1>
+          <small>Written by {{article.author}} on {{article.create_date}}</small>
+          <hr>
+          <div>
+            {{article.body | safe}}
+          </div>
+
+    {% endblock %}
+
+</body>
+</html>
